@@ -6,7 +6,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\" ",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
@@ -35,8 +35,7 @@
     "fs": "0.0.1-security",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
-    "tls": "0.0.1",
-    "webpack": "^4.41.0"
+    "tls": "0.0.1"
   },
   "homepage": "https://github.com/anyakeller/google-books-search#readme"
 }
