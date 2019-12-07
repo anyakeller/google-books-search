@@ -14,17 +14,20 @@ class App extends React.Component {
     };
   }
 
-  async handleSearch(query) {
-    let results = await API.search(query);
-    console.log(results);
+  handleSearch = query=> {
+    API.search(query).then(results => {
+      this.setState({
+        searchResults: results
+      });
+    });
   }
 
   render() {
     return (
       <>
         <HeadThing />
-        <SearchBar handleSearch={this.handleSearch}/>
-        <Results />
+        <SearchBar handleSearch={this.handleSearch} />
+        <Results books={this.state.searchResults} />
       </>
     );
   }

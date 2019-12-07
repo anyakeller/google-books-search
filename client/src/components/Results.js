@@ -4,6 +4,7 @@ import BookCard from './BookCard';
 class Results extends React.Component {
   constructor(props) {
     super(props);
+		console.log(props);
   }
 
   populateResults() {
